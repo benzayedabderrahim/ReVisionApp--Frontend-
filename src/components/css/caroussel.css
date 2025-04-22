@@ -1,0 +1,44 @@
+/* Comments List */
+.comments-list {
+  max-height: 200px; /* Limit height for scrollable list */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comment-item {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-icon {
+  margin-right: 10px;
+}
+
+.user-icon-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Circular user icon */
+  object-fit: cover; /* Ensure the image fits well */
+}
+
+.comment-content {
+  flex: 1;
+}
+
+.comment-text {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+}
+
+.comment-date {
+  display: none;
+}

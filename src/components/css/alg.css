@@ -1,0 +1,116 @@
+.algorithm-videos-page {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+  }
+  
+  .algorithm-videos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 80px; /* Account for navbar */
+  }
+  
+  .algorithm-videos-title {
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+  
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  .loading-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+  }
+  
+  .spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .error-message {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border-radius: 5px;
+    margin: 20px 0;
+  }
+  
+  .retry-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .retry-button:hover {
+    background-color: #c82333;
+  }
+  
+  @media (max-width: 768px) {
+    .video-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .algorithm-videos-container {
+      padding: 15px;
+      padding-top: 70px;
+    }
+    
+    .algorithm-videos-title {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+  }
+
+  .language-filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.language-filter-btn {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-filter-btn:hover {
+    background-color: #e9ecef;
+}
+
+.language-filter-btn.active {
+    background-color: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+}
