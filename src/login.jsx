@@ -76,32 +76,6 @@ const Login = () => {
     }
   };
 
-  const handleDjangoLogin = async (e) => {
-    e.preventDefault();
-    setError("");
-    setLoading(true);
-
-    try {
-      const response = await axios.post(`${API_URL}login/`, {
-        email,
-        password,
-      });
-
-      if (response.status === 200) {
-        const firebaseKey = email.replace(/[.$#[\]/]/g, '-');
-        await set(ref(db, `users/${firebaseKey}/lastLogin`), new Date().toISOString());
-        navigate("/home");
-      }
-    } catch (err) {
-      setError(
-        err.response?.data?.error ||
-        "Login failed. Please try again."
-      );
-    } finally {
-      setLoading(false);
-    }
-  };
-
   const handleSignUp = async (e) => {
     e.preventDefault();
     setError("");
