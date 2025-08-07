@@ -115,7 +115,6 @@ const AlgorithmVideos = () => {
         return (
             <div className="search-container">
                 <Navbar bg="dark" variant="dark" expand="lg" className="navbar-custom">
-                    {/* Same Navbar as above */}
                 </Navbar>
                 <div className="error-message">
                     <p>{error}</p>
